@@ -5,7 +5,7 @@ class PlayFaircipher:
     def __init__(self):
         pass
     
-    def create_plyfiar_matrix(self, key):
+    def create_playfiar_matrix(self, key):
         key = key.replace("J", "I")
         key = key.upper()
         key_set = set(key)
@@ -65,7 +65,7 @@ class PlayFaircipher:
             if decrypted_text[i] == decrypted_text[i+2]:
                 banro += decrypted_text[i]
             else:
-                banro += decrypted_text[i] + " " + decrypted_text[i+1]
+                banro += decrypted_text[i] + "" + decrypted_text[i+1]
         
         if decrypted_text[-1] == "X":
             banro += decrypted_text[-2]
