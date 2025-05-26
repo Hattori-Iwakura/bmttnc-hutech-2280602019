@@ -5,7 +5,7 @@ class PlayFaircipher:
     def __init__(self):
         pass
     
-    def create_playfiar_matrix(self, key):
+    def create_playfair_matrix(self, key):
         key = key.replace("J", "I")
         key = key.upper()
         key_set = set(key)
