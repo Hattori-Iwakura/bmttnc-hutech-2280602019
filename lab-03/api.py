@@ -1,7 +1,6 @@
 from flask import Flask, request, jsonify
 from cipher.rsa import RSACipher
 from cipher.ecc import ECCCipher
-
 app = Flask(__name__)
 
 # RSA CIPHER ALGORITHM
@@ -89,6 +88,8 @@ def ecc_verify_signature():
     signature = bytes.fromhex(signature_hex)
     is_verified = ecc_cipher.verify(message, signature, public_key)
     return jsonify({'is_verified': is_verified})
+
+
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=5000, debug=True)

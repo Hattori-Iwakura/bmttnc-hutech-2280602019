@@ -75,7 +75,7 @@ def playfair_encrypt():
     data = request.json
     plain_text = data['plain_text']
     key = data['key']
-    playfair_matrix = playfair_cipher.create_playfiar_matrix(key)
+    playfair_matrix = playfair_cipher.create_playfair_matrix(key)
     encrypted_text = playfair_cipher.playfair_encrypt(plain_text, playfair_matrix)
     return jsonify({'encrypted_message': encrypted_text})
 
@@ -84,7 +84,7 @@ def playfair_decrypt():
     data = request.json
     cipher_text = data['cipher_text']
     key = data['key']
-    playfair_matrix = playfair_cipher.create_playfiar_matrix(key)
+    playfair_matrix = playfair_cipher.create_playfair_matrix(key)
     decrypted_text = playfair_cipher.playfair_decrypt(cipher_text, playfair_matrix)
     return jsonify({'decrypted_message': decrypted_text})
 
